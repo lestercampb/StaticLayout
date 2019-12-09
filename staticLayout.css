@@ -1,0 +1,149 @@
+html {
+    font-family: Cousine;
+    font-style: lighter;
+    background: #f1f3f5;
+      color: #373f48;
+    
+  }
+  
+  #arrow:hover{
+    background-color: purple;
+    border-radius: 200px;
+  }
+  
+  /*styling for devhints at top middle*/
+  #middle{
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 12px
+  }
+  
+  
+  
+  h3{
+    font-family: 'Roboto', sans-serif;
+    color: #855dd5;
+    font-weight: 300;
+    
+    
+  }
+  hr{
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+  
+  
+  .navbar {
+    height: 60px;
+    width: 100vw;
+    background-color: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #gitedit {
+    display:flex;
+    height: 30px;
+    width: 60px;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    background:none;
+    border: 1px lightgray solid
+    
+    
+  }
+  
+    .links {
+      display: flex;
+      width: 150px;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-end;
+    }
+  
+  .title{
+   
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 45px;
+    display:flex;
+    justify-content: center;
+    color: #4e5965;
+  
+    
+  }
+  
+  .ads {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  /*styles the word cheatsheet*/
+  #cheat {
+    font-weight: lighter;
+    color: #d1d1e0;
+  }
+   /*"separator" refers to the purple section lines*/
+  .separator {
+      display: flex;
+      align-items: center;
+      text-align: left;
+  }
+  .separator::after {
+      content: '';
+      flex: 1;
+  }
+  
+  .separator::after {
+      margin: 2em;
+      height: 1px;
+      color: #d1bfe3;
+    
+    background: -webkit-gradient(linear, 0 0, 90% 0, from(#d1dfe3), to(#f1f3f5), color-stop(0%, #d1bfe3));
+  }
+  
+  /* box styling */
+  .content{
+    border: 1px #e7dff0 solid;
+    box-shadow: 0px 1px #e7dff0; 
+    font-size: 12px;
+    background: white;
+   
+  }
+  
+  /*styles tables within boxes*/
+  table{
+    padding: 1px;
+    margin: 10px;
+    table-layout:fixed;
+    width: 100%;
+    
+  }
+  /*lighter subheads within boxes*/
+  .subhead{
+    align-self: flex-start;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 0px;
+    background: #f7f7f7;
+    color: #7f8494
+    
+  }
+  
+  /*specific styling for the first Arrays item*/
+  
+  #firstItem {
+     background: #f7f7f7;
+     margin: 0px;
+    padding: 10px;
+     padding-left: 15px;
+     display: flex;
+    justify-content: flex-start;
+    
+  }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href="staticLayout.css">
+  <meta content='JavaScript Arrays cheatsheet' >
+  <title>devhints.io</title>
+</head>
+<body>
+  <!--navbar section-->
+<nav class="navbar">
+  <div id="arrow"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjhjXYuRF2OJrMmKi8876EebC4NlXy1TCrT4prVU0L8_C2ur9h" width=20 class="circle"> 
+   <style> 
+      .circle {
+       border-radius: 60px;
+       }
+    </style>
+     </div>
+  <div id="middle" style="text-align: center"><b>DEVHINTS.IO</b></div>
+  <div class="links">
+    <div id="fb"><img src="https://image.flaticon.com/icons/svg/124/124010.svg" width="15"></div>
+    <div id="tweet"><img src="http://www.vectorsland.com/imgd/l62697-new-twitter-logo-49466.png" width="15"></div>
+    <button id="gitedit"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width ="15">Edit </button>
+  </div>
+  </nav>
+ 
+  <!--title and ads -->     
+
+<header>
+  <div class ="title">JavaScript Arrays<div id="cheat">cheatsheet</div></div>
+  <br>
+  <div style="text-align: center"><img src="images/ad.png"></div>
+  <br>
+ </header>
+  
+ <!-- content begins -->
+  <section style="width:49%;float:left">
+      
+    <div class="separator"><h3>Arrays</h3></div>
+    <div class="content"> 
+      
+         
+      <div id="firstItem"> list = [a,b,c,d,e] </div>
+      <table>
+        <tr>
+          <td>list[1] </td>         
+          <td>  // &rarr; b </td>
+        </tr>
+        <tr>
+          <td>list.indexOf(b)</td>   
+          <td>// &rarr; 1</td>
+        </tr>
+      </table>
+        </div> 
+            
+            </section>
+    
+         <section style="width:49%; float:right">
+           <div class="separator"> <h3>Subsets</h3>           </div>
+           <div class="content"> 
+             <div class="subhead">Immutable</div>
+           <table>
+             <tr>
+             <td>list.slice(0,1)</td>   
+             <td>// &rarr; [a      ]</td>
+             </tr>
+             <tr>
+               <td>list.slice(1)</td>
+               <td>// &rarr; [  b,c,d,e]</td>
+             </tr>
+             <tr>
+               <td>list.slice(1,2)</td>
+               <td>// &rarr; [ b      ]</td>
+             </tr>
+             </table>
+             <div class="subhead">Mutative</div>
+             <table>
+             <tr>
+             <td>re = list.splice(1)</td>   
+             <td>// re = [b,c,d,e ]</td>
+             <td> list == [a] </td>
+             </tr>
+             <tr>
+               <td>re = list.splice(1,2)</td>
+               <td>// re = [b,c]</td>
+               <td>list == [a,d,e]</td>
+             </tr>
+             </table>
+           </div>
+  </section>
+   <section style="width:49%;float:left">          
+    <div class="separator"> 
+      <h3>Adding items</h3></div>
+           <div class="content"> 
+             <div class="subhead">Mutative</div>
+           <table>
+             <tr>
+             <td>list.push(X)</td>   
+             <td>// list == [_,_,_,_,_,X]</td>
+             </tr>
+             <tr>
+               <td>list.unshift(X)</td>
+               <td>// list == [X,_,_,_,_,_]</td>
+             </tr>
+             <tr>
+               <td>list.splice(2, 0, X)</td>
+               <td>// list == [_,_,X,_,_,_]</td>
+             </tr>
+             </table>
+             <div class="subhead">Immutable</div>
+             <table>
+             <tr>
+             <td>list.concat([X,Y])</td>   
+               <td>// &rarr; [_,_,_,_,_,X,Y]</td>
+             </tr>
+             </table>
+           </div>
+           </section>
+  <section style="width:49%; float:right">
+    <div class="separator"> <h3>Inserting</h3></div>
+    <div class="content">
+      <table>
+        <tr>
+          <td>// after -- [_,_,REF,NEW,_,_]</td></tr> 
+        <tr><td>list.splice(list.indexOf(REF)+1, 0, NEW))</td><tr></table>
+      <table>
+        <tr>
+          <td>//before -- [_,_,NEW,REF,_,_]</td></tr>
+        <tr><td>list.splice(list.indexOf(REF),0,NEW))</td></tr>
+      </table>
+        </div> </section>
+  
+  <section style="width:49%; float:left">
+    <div class="separator"> <h3>Replace items</h3></div>
+    <div class="content"> 
+      <table>
+        <tr><td>list.splice(2, 1, X)</td>
+          <td>// list == [a,b,X,d,e]</td>
+        </tr></table></div></section>
+    
+   <section style="width:49%; float:right">
+    <div class="separator"> <h3>Removing items</h3></div>
+    <div class="content"> 
+      <table>
+        <tr><td>list.pop()</td>
+          <td>// &rarr; e  </td>
+          <td> list  ==[a,b,c,d]</td>
+        </tr>
+        <tr><td>list.shift()</td>
+          <td>// &rarr; a</td>
+          <td>list == [b,c,d,e]</td>
+        </tr>
+        <tr><td>list.splice(2, 1)</td>
+          <td>// &rarr; [c]</td>
+          <td>list == [a,b,d,e]
+      </table></div></section>
+  
+   <section style="width:49%; float:left">
+    <div class="separator"> <h3>Iterables</h3></div>
+    <div class="content"> 
+      <table>
+        <tr><td>.filter(n => ..<b>.</b>) => array</td>
+        </tr>
+      </table>
+      <table>
+        <tr><td>.find(n => ..<b>.</b>)  // es6</td>
+        </tr>
+        <tr><td>.findIndex(..<b>.</b>) // es6</td>
+      </table>
+      <table>
+        <tr><td>.every(n => ..<b>.</b>) => Boolean // ie9+</td></tr>
+        <tr><td>.some(n => ..) => Boolean // ie9+</tr></td>
+      </table>
+     <table>
+       <tr><td>.map(n => ..<b>.</b>)  // ie9+</td></tr>
+       <tr><td>.reduce((total,n) => total)  // ie9+</tr></td>
+     <tr><td>.reduceRight(..<b>.</b>)</td></tr>
+     </div></section>
+     
+    
+</body>
+</html>
